@@ -1,0 +1,25 @@
+{
+  "canisters": {
+    "AURA_backend": {
+      "main": "src/AURA_backend/main.mo",
+      "type": "motoko"
+    },
+    "AURA_frontend": {
+      "dependencies": [
+        "AURA_backend"
+      ],
+      "source": [
+        "src/AURA_frontend/assets"
+      ],
+      "type": "assets"
+    }
+  },
+  "defaults": {
+    "build": {
+      "args": "",
+      "packtool": ""
+    }
+  },
+  "output_env_file": ".env",
+  "version": 1
+}
