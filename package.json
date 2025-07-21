@@ -1,16 +1,18 @@
 {
-    "name": "AURA",
-    "type": "module",
-    "scripts": {
-        "start": "npm start --workspaces --if-present",
-        "prebuild": "npm run prebuild --workspaces --if-present",
-        "build": "npm run build --workspaces --if-present",
-        "pretest": "npm run prebuild --workspaces --if-present",
-        "test": "npm test --workspaces --if-present"
-    },
-    "engines": {
-        "node": ">=16.0.0",
-        "npm": ">=7.0.0"
-    },
-    "workspaces": [ ]
+  "name": "aura-root",
+  "private": true,
+  "version": "0.1.0",
+  "workspaces": [
+    "src/aura-frontend"
+  ],
+  "scripts": {
+    "build": "npm run build --workspace=aura-frontend",
+    "prebuild": "npm run prebuild --workspace=aura-frontend --if-present",
+    "prestart": "npm run prebuild --workspace=aura-frontend --if-present",
+    "start": "npm start --workspace=aura-frontend",
+    "test": "npm test --workspace=aura-frontend"
+  },
+  "devDependencies": {
+    "typescript": "^5.4.5"
+  }
 }

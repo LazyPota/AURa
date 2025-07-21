@@ -1,18 +1,21 @@
 {
-  "canisters": {
-    "AURA_backend": {
-      "main": "src/AURA_backend/main.mo",
-      "type": "motoko"
+"canisters": {
+  "aura-backend": {
+    "main": "src/aura-backend/main.mo",
+    "type": "motoko"
+  },
+  "aura-frontend": {
+    "dependencies": [
+      "aura-backend"
+    ],
+    "frontend": {
+      "entrypoint": "src/aura-frontend/index.html"
     },
-    "AURA_frontend": {
-      "dependencies": [
-        "AURA_backend"
-      ],
-      "source": [
-        "src/AURA_frontend/assets"
-      ],
-      "type": "assets"
-    }
+    "source": [
+      "src/aura-frontend/dist"
+    ],
+    "type": "assets"
+  }
   },
   "defaults": {
     "build": {
