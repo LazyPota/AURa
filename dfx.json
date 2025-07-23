@@ -9,7 +9,7 @@
       "aura-backend"
     ],
     "frontend": {
-      "entrypoint": "src/aura-frontend/index.html"
+      "entrypoint": "src/aura-frontend/dist/index.html"
     },
     "source": [
       "src/aura-frontend/dist"
