@@ -5,6 +5,7 @@
   "type": "module",
   "scripts": {
     "setup": "npm i && dfx canister create AURA_backend && dfx generate AURA_backend && dfx deploy",
+    "prestart": "dfx generate aura-backend",
     "start": "vite --port 3000",
     "build": "vite build",
     "dev": "vite dev"
