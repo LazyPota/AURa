@@ -1,5 +1,5 @@
 import { Actor, HttpAgent } from '@dfinity/agent';
-import { idlFactory } from '../../../declarations/aura-backend/aura-backend.did.js';
+import { idlFactory } from 'declarations/aura-backend/aura-backend.did.js';
 
 const canisterId = 'uxrrr-q7777-77774-qaaaq-cai'; // Ganti dengan hasil dfx canister id aura-backend
 const host = window.location.hostname === 'localhost' ? 'http://127.0.0.1:4943' : undefined;
