@@ -1,26 +1,36 @@
 {
-"canisters": {
-  "aura-backend": {
-    "main": "src/aura-backend/main.mo",
-    "type": "motoko"
-  },
-  "aura-frontend": {
-    "dependencies": [
-      "aura-backend"
-    ],
-    "frontend": {
-      "entrypoint": "src/aura-frontend/dist/index.html"
+  "canisters": {
+    "aura-backend": {
+      "main": "src/aura-backend/main.mo",
+      "type": "motoko"
     },
-    "source": [
-      "src/aura-frontend/dist"
-    ],
-    "type": "assets"
-  }
+    "aura-frontend": {
+      "dependencies": [
+        "aura-backend"
+      ],
+      "frontend": {
+        "entrypoint": "src/aura-frontend/dist/index.html"
+      },
+      "source": [
+        "src/aura-frontend/dist"
+      ],
+      "type": "assets"
+    }
   },
   "defaults": {
     "build": {
       "args": "",
       "packtool": ""
+    }
+  },
+  "networks": {
+    "local": {
+      "bind": "127.0.0.1:4943",
+      "type": "ephemeral"
+    },
+    "ic": {
+      "providers": ["https://ic0.app"],
+      "type": "persistent"
     }
   },
   "output_env_file": ".env",
